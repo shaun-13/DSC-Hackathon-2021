@@ -6,7 +6,7 @@ Resources used
 - Toastify
 - Start Bootstrap
 
-##Main Features
+## Main Features
 
 ### Success Stories
 
