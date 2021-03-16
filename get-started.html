@@ -45,7 +45,7 @@
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">Get Started</a>
+            <a class="nav-link" href="get-started.html">Get Started</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact us</a>
@@ -57,60 +57,65 @@
 
   <!-- Page Header -->
   <header class="masthead" style="background-image: url('img/about-bg.jpg')">
+    
     <div class="overlay"></div>
+    
+    <!-- Main Content -->
     <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h2>Experience Asset-Based Community Development!</h2>
-            <span class="subheading">Simulate the process of creating a community project</span>
+      <div style="padding-top: 100px;"></div>
+      <div class="row" id="qns">
+        <div class="col-lg-8 col-md-10 mx-auto mt-2" >
+          <div class="post-preview">
+            
+            <h3 class="post-title" style="color: antiquewhite;">
+              You are the President of the Lions club at Singapore National University. 
+              You and your club members are currently designing a Community Service Project and need to make some choices.
+            </h3>
+
+            <br>
+
+            <h3 class="post-title" style="color: antiquewhite; text-decoration: underline;">
+              Which target group do you want to help?
+            </h3>
+
+            <h3 class="post-title">
+              
+            </h3>
+            <div class="row">
+              <div class="col-lg-5 col-md-5 m-2">
+                <button class="btn btn-light btn-lg btn-block" onclick="promptCorrectChoice()">Ex-convicts in Singapore</button>
+              </div>
+              <div class="col-lg-5 col-md-5 m-2">
+                <button class="btn btn-light btn-lg btn-block" onclick="promptCorrectChoice()">Lonely Elderly in Toa Payoh</button>
+
+              </div>
+              <div class="col-lg-5 col-md-5 m-2">
+                <a href="question-2.html#video" class="btn btn-light btn-lg btn-block">Villagers in Chi Phat Village, Cambodia</a>
+              </div>
+              <div class="col-lg-5 col-md-5 m-2">
+                <button class="btn btn-light btn-lg btn-block" onclick="promptCorrectChoice()">Orphans in Phahom, Laos</button>
+              </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <p class="copyright" style="color:white;">Team AngelYoung &copy; 2021</p>
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   </header>
-
-  <!-- Main Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="post-preview">
-          <h3 class="post-title">
-            Who do you want to help?
-          </h3>
-          <div class="row">
-            <div class="col-lg-5 col-md-5 m-2">
-              <button class="btn btn-light btn-lg btn-block" onclick="promptCorrectChoice()">Ex-convicts in Singapore</button>
-            </div>
-            <div class="col-lg-5 col-md-5 m-2">
-              <button class="btn btn-light btn-lg btn-block" onclick="promptCorrectChoice()">Lonely Elderly in Toa Payoh</button>
-
-            </div>
-            <div class="col-lg-5 col-md-5 m-2">
-              <a href="question-2.html#question" class="btn btn-light btn-lg btn-block">Villagers in Chi Phat Village, Cambodia</a>
-            </div>
-            <div class="col-lg-5 col-md-5 m-2">
-              <button class="btn btn-light btn-lg btn-block" onclick="promptCorrectChoice()">Orphans in Phahom, Laos</button>
-            </div>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-
-  <hr>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          
-          <p class="copyright text-muted">Team AngelYoung &copy; 2021</p>
-        </div>
-      </div>
-    </div>
-  </footer>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>

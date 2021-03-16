@@ -46,7 +46,7 @@
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">Get Started</a>
+            <a class="nav-link" href="get-started.html">Get Started</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact us</a>
@@ -62,61 +62,73 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h2>Experience Asset-Based Community Development!</h2>
-            <span class="subheading">Simulate the process of drafting a community project</span>
+          <div style="padding-top: 100px;">
+            <iframe id="video" width="100%" height="500px"
+              src="https://www.youtube-nocookie.com/embed/wBrEtuDXXyU?controls=0" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
-  </header>
 
-  <!-- Main Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="post-preview" id="question">
-          <h3 class="post-title">
-            What are some strengths of the villagers that we can leverage on to help them improve their standards of living?
-          </h3>
-          <div class="row">
-            <div class="col-lg-5 col-md-5 m-2">
-              <a class="btn btn-light btn-lg btn-block" onclick="chooseCorrectChoice('Handy Craftspeople')">Handy Craftspeople</a>
-            </div>
-            <div class="col-lg-5 col-md-5 m-2">
-              <a class="btn btn-light btn-lg btn-block" onclick="chooseCorrectChoice('Strong in Manual Labour')">Strong in Manual Labour</a>
 
-            </div>
-            <div class="col-lg-5 col-md-5 m-2">
-              <a class="btn btn-light btn-lg btn-block" onclick="promptCorrectChoice()">Kindhearted</a>
-            </div>
-            <div class="col-lg-5 col-md-5 m-2">
-              <a class="btn btn-light btn-lg btn-block" onclick="chooseCorrectChoice('Eager to Learn')">Eager to Learn</a>
-            </div>
-
-            <div id="correctChoice" style="display: none;">
-              <hr>
-              <h1>Moving to the next question in <span id="countDown">5</span> seconds...</h1>
-            </div>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-
-  <hr>
-
-  <!-- Footer -->
-  <footer>
+    <!-- Main Content -->
     <div class="container">
-      <div class="row">
+      <div class="row" id="qns">
         <div class="col-lg-8 col-md-10 mx-auto">
-          
-          <p class="copyright text-muted">Team AngelYoung &copy; 2021</p>
+          <div class="post-preview" id="question">
+            <h3 class="post-title" style="color: antiquewhite;">
+              What are some strengths of the villagers that we can leverage on to help them improve their standards of
+              living?
+            </h3>
+            <div class="row">
+              <div class="col-lg-5 col-md-5 m-2">
+                <a class="btn btn-light btn-lg btn-block" onclick="chooseCorrectChoice('Handy Craftspeople')" href="#correctChoice">Handy
+                  Craftspeople</a>
+              </div>
+              <div class="col-lg-5 col-md-5 m-2">
+                <a 
+                  class="btn btn-light btn-lg btn-block"
+                  onclick="chooseCorrectChoice('Strong in Manual Labour')"
+                  href="#correctChoice"
+                >
+                Strong in Manual Labour
+                </a>
+
+              </div>
+              <div class="col-lg-5 col-md-5 m-2">
+                <a class="btn btn-light btn-lg btn-block" onclick="promptCorrectChoice()">Kindhearted</a>
+              </div>
+              <div class="col-lg-5 col-md-5 m-2">
+                <a class="btn btn-light btn-lg btn-block" href="#correctChoice" onclick="chooseCorrectChoice('Eager to Learn')">Eager to
+                  Learn</a>
+              </div>
+
+              <div id="correctChoice" style="display: none;">
+                <hr>
+                <h1 style="color: antiquewhite;">Moving to the next question in <span id="countDown">5</span> seconds...</h1>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+
+      <hr>
+
+      <!-- Footer -->
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+
+              <p class="copyright" style="color:white;">Team AngelYoung &copy; 2021</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+  </header>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -129,9 +141,9 @@
 
     function chooseCorrectChoice(choice) {
       Toastify({
-      text: `"${choice}" could be a strength that we can leverage on for this situation!`,
-      duration: 5000,
-      backgroundColor: "green"
+        text: `"${choice}" could be a strength that we can leverage on for this situation!`,
+        duration: 5000,
+        backgroundColor: "green"
       }).showToast();
 
       document.getElementById("correctChoice").style.display = "initial"
@@ -143,7 +155,7 @@
         document.getElementById("countDown").innerText = countDown
 
         if (countDown === 0) {
-          window.location.href = "./question-4.html#question"
+          window.location.href = "./question-4.html#video"
         }
       }, 1000);
 
@@ -151,9 +163,9 @@
 
     function promptCorrectChoice() {
       Toastify({
-      text: "\"Kindhearted\" is likely not an appropriate strength that we can leverage on for this situation!",
-      duration: 3000,
-      backgroundColor: "red"
+        text: "\"Kindhearted\" is likely not an appropriate strength that we can leverage on for this situation!",
+        duration: 3000,
+        backgroundColor: "red"
       }).showToast();
     }
   </script>
