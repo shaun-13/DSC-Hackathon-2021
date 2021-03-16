@@ -81,17 +81,22 @@
           </h3>
           <div class="row">
             <div class="col-lg-5 col-md-5 m-2">
-              <a href="question-4.html#question" class="btn btn-light btn-lg btn-block">Handy Craftspeople</a>
+              <a class="btn btn-light btn-lg btn-block" onclick="chooseCorrectChoice('Handy Craftspeople')">Handy Craftspeople</a>
             </div>
             <div class="col-lg-5 col-md-5 m-2">
-              <a href="question-4.html#question" class="btn btn-light btn-lg btn-block">Strong in Manual Labour</a>
+              <a class="btn btn-light btn-lg btn-block" onclick="chooseCorrectChoice('Strong in Manual Labour')">Strong in Manual Labour</a>
 
             </div>
             <div class="col-lg-5 col-md-5 m-2">
               <a class="btn btn-light btn-lg btn-block" onclick="promptCorrectChoice()">Kindhearted</a>
             </div>
             <div class="col-lg-5 col-md-5 m-2">
-              <a href="question-4.html#question" class="btn btn-light btn-lg btn-block">Eager to Learn</a>
+              <a class="btn btn-light btn-lg btn-block" onclick="chooseCorrectChoice('Eager to Learn')">Eager to Learn</a>
+            </div>
+
+            <div id="correctChoice" style="display: none;">
+              <hr>
+              <h1>Moving to the next question in <span id="countDown">5</span> seconds...</h1>
             </div>
         </div>
         
@@ -107,7 +112,7 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           
-          <p class="copyright text-muted">Copyright &copy; Your Website 2020</p>
+          <p class="copyright text-muted">Team AngelYoung &copy; 2021</p>
         </div>
       </div>
     </div>
@@ -121,10 +126,34 @@
   <script src="js/clean-blog.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script>
+
+    function chooseCorrectChoice(choice) {
+      Toastify({
+      text: `"${choice}" could be a strength that we can leverage on for this situation!`,
+      duration: 5000,
+      backgroundColor: "green"
+      }).showToast();
+
+      document.getElementById("correctChoice").style.display = "initial"
+
+
+      let countDown = 5
+      setInterval(() => {
+        countDown--
+        document.getElementById("countDown").innerText = countDown
+
+        if (countDown === 0) {
+          window.location.href = "./question-4.html#question"
+        }
+      }, 1000);
+
+    }
+
     function promptCorrectChoice() {
       Toastify({
-      text: "\"Kindhearted\" is likely not an appropriate strength that we can use for this situation!",
-      duration: 3000
+      text: "\"Kindhearted\" is likely not an appropriate strength that we can leverage on for this situation!",
+      duration: 3000,
+      backgroundColor: "red"
       }).showToast();
     }
   </script>
