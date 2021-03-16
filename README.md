@@ -2,6 +2,8 @@
 
 ## Team AngelYoung's solution - The Success Portal
 
+![Project Name (1)](https://user-images.githubusercontent.com/54528035/111344952-cd833f80-86b7-11eb-8f15-89b39a564d62.gif)
+
 Live Demo: http://angel-young.s3-website-us-east-1.amazonaws.com/index.html
 
 Resources used
