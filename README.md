@@ -2,6 +2,8 @@
 
 ## Team AngelYoung's solution - The Success Portal
 
+Live Demo: http://angel-young.s3-website-us-east-1.amazonaws.com/index.html
+
 Resources used
 - Toastify
 - Start Bootstrap
